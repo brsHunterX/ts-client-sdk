@@ -1,0 +1,39 @@
+{
+  "include": [
+    "./lib/**/*x.ts"
+  ],
+  "exclude": [
+    "**/*.md",
+    "**/build",
+    "**/node_modules",
+    "**/rollup.config.js"
+  ],
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "rootDir": "./lib",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "./lib/*"
+      ],
+      "@tests/*": [
+        "./lib/tests/*"
+      ],
+    },
+    "types": [
+      "node",
+      "jest"
+    ],
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./build",
+    "declarationDir": "./build/types",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+  }
+}
